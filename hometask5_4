@@ -1,0 +1,18 @@
+source = '4.txt'
+translate = '4ru.txt'
+
+with open(source, 'r') as read, open(translate, 'w') as wr:
+    element = ''
+    for index in read:
+        for i in index.split(' '):
+            if (i == "One"):
+                i = "odin"
+            elif (i == "Two"):
+                i = "dva"
+            elif (i == "Three"):
+                i = "tri"
+            elif (i == "Four"):
+                i = "chetyre"
+            element = element + " " + i
+        wr.write(element)
+        element = ''
